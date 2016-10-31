@@ -16,5 +16,39 @@
 * Run the aplication *
 ---------------------
 
-	- nodemon
+	- Already Done: 
+
+		$ npm install -g express-generator
+		$ express chessServer //to create this Boilerplate server
+
+		$ // Added this data to connect to the Database
+		$ var mongo = require('mongodb');
+		$ var monk = require('monk');
+		$ var db = monk('localhost:27017/chessServer');
+
+		$ // Make our db accessible to our router
+		$ app.use(function(req,res,next){
+		$ 	req.db = db;
+		$ 	next();
+		$ });
+
+	- Start the database: 
+
+		$ mongod --dbpath [...]/chessServer/data
+
+		> Optional : Check that the database connection 
+
+		$ mongo
+		$ use chessServer
+		$ db.userlist.insert({data : data}) 
+
+	- Prepare the Aplication
+
+		$ npm install
+		$ npm install nodemon -g   //We install it globally.
+		$ npm install monk --save  //This will take care of the Database conection
+
+	- Start the app with nodemon
+
+		$ nodemon //on same filepath as bin/
 
