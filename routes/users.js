@@ -37,7 +37,7 @@ router.get('/userlist/:userId/games', function(req, res) {
 	var db = req.db;
 	var collection = db.get('userlist');
 	var userToValidate = req.params.userId; //this will not work yet because we are checking for username
-	collection.find({'_id': userToValidate},{'savedgames':false},function(err, docs) {
+	collection.find({'_id': userToValidate},{"_id":0,"username":0,"email":0,"fullname":0,"age":0,"location":0,"gender":0,'savedgames':1},function(err, docs) {
 		if(err === null){
 			res.json(docs);
 		}else{

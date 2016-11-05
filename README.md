@@ -52,3 +52,27 @@
 
 		$ nodemon //on same filepath as bin/
 
+
+* Run the aplication *
+---------------------
+
+	- TODO BBDD: 
+
+		- Cambiar todo a Mongoose
+		- Preparar la BBDD de Games para que tengan FEN strings por jugada. 
+		
+
+	- TODO Front:
+
+		- Enviar con Ajax el FEN string luego de cada movimiento. 
+		- 
+
+
+
+
+
+
+
+
+
+
