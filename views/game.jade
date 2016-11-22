@@ -1,0 +1,29 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to
+		strong #{title}
+	h2 Hola 
+		span(style="color:red;") #{player1}
+		, hoy pelearás contra 
+		span(style="color:red;") #{player2}.
+	
+	p This game was started at 
+		span(style="color:red;") #{startingDate}
+
+	//p And its id is 
+		span(style="color:red;") #{id}
+
+	
+	<div id="board" style="width: 400px"></div>
+	<p>FEN: <span id="fen"></span></p>
+	<p>PGN: <span id="pgn"></span></p>
+	<p>Whos Playing: <span id="whosPlaying">White</span></p>
+	<p>Moves: <span id="moves"></span></p>
+	<input type="button" id="startBtn" value="Start" />
+	<input type="button" id="clearBtn" value="Clear" />
+
+
+
+	script(src="/javascripts/chessgame.js")
