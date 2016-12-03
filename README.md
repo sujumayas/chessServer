@@ -67,10 +67,44 @@
 		- Enviar con Ajax el FEN string luego de cada movimiento. 
 		- 
 
+* Advanced today (21 Nov 2016) *
+---------------------------------
+
+	Modified	:	public/stylesheets/style.css
+	Modified	:	routes/games.js
+	Modified	:	views/layout.jade
+
+	Created 	: 	chessboardTest/
+	Created 	: 	public/images/
+	Created 	: 	public/javascripts/
+	Created 	: 	public/stylesheets/chessboard.css
+	Created 	: 	views/game.jade
+
+
+	If you enter here: 
+
+		http://localhost:3000/games/58175c2e758f692849935874
+
+	Now you can see the board 
+
+		Styles 		: (chessboard.css)
+		Javascript  : (chess.js + chessboard.js + chessgame.js)
+		images		: (images/chesspieces/wikipedia) *Important: I had to change 					chess.js to parse the correct images folder. 
 
 
 
+	TODO: 
 
+	- Add the FEN string to the Model & testing data (DB) of the games. (easy)
+	- Start the games with that FEN string. (easy)
+	- Restrict movement to the correct moves. (easy)
+	- Restrict movement BY USER (hard)
+	- Update the FEN string after every movement. (medium)
+	- Save all movements to the game model with the player names and/or Ids that make the moves and have the posibility to re-start a game where you left it.
+	- Add historical-view of the game (before LOADING it to play)  
+	- Add BACK & FORDWARD Buttons to check all the moves of a game.
+	- Add a button to LOAD the game and play it. 
+	- The historical view must be the DEFAULT view of a game. Not the playable one.  
 
 
 
